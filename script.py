@@ -15,7 +15,7 @@ def process_excel(file_name):
     """
 
     # Create a copy to edit
-    updated_file_name = f"{file_name}-updated"
+    updated_file_name = "updated.xlsx"
     shutil.copy(file_name, updated_file_name)
 
     # Define sheet details
