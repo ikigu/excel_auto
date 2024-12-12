@@ -3,3 +3,4 @@ debug.txt
 *xlsx
 .env
 __pycache__
+.DS_Store
