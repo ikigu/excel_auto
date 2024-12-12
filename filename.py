@@ -23,7 +23,6 @@ def create_new_file_path(old_file_path):
 
     Args:
         old_file_path (str): The path to the existing .xlsx file.
-        new_file_name (str): The new file name to be appended (should include '.xlsx').
 
     Returns:
         str: The new file path if successful.
@@ -48,9 +47,3 @@ def create_new_file_path(old_file_path):
     new_file_path = os.path.join(directory, new_file_name)
 
     return new_file_path
-
-
-# if __name__ == "__main__":
-#     old_path = "/path/to/old_file.xlsx"
-#     new_path = rename_xlsx_file(old_path)
-#     print(f"File renamed to: {new_path}")
