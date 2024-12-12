@@ -1,3 +1,5 @@
 myenv
 debug.txt
 *xlsx
+.env
+__pycache__
