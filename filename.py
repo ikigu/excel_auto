@@ -17,7 +17,7 @@ def get_day_with_suffix(day):
     return f"{day}{suffix}"
 
 
-def rename_xlsx_file(old_file_path):
+def create_new_file_path(old_file_path):
     """
     Creates the a path with the new file name according to today's date
 
