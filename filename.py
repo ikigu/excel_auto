@@ -35,9 +35,6 @@ def create_new_file_path(old_file_path):
     if not os.path.isfile(old_file_path):
         raise FileNotFoundError(f"The file '{old_file_path}' does not exist.")
 
-    if not new_file_name.endswith(".xlsx"):
-        raise ValueError("The new file name must have a '.xlsx' extension.")
-
     # Extract the directory of the old file
     directory = os.path.dirname(old_file_path)
 
