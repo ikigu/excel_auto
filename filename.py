@@ -42,7 +42,7 @@ def create_new_file_path(old_file_path):
     date = datetime.now()
 
     # Create the new file name with today's date
-    new_file_name = f"{get_day_with_suffix(date.day)} {date.strftime('%B %Y')}.xslx"
+    new_file_name = f"{get_day_with_suffix(date.day)} {date.strftime('%B %Y')}.xlsx"
 
     # Construct the new file path
     new_file_path = os.path.join(directory, new_file_name)
