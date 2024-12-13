@@ -8,7 +8,8 @@
 		"first_data_row": 6,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["F", "G"]
+		"columns_to_clear": ["F", "G"],
+		"rows_to_clear": []
 	},
 	{
 		"sheet_name": "LUBES SHOP SUMMARY",
@@ -19,7 +20,8 @@
 		"first_data_row": 6,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["F", "G", "H"]
+		"columns_to_clear": ["F", "G", "H"],
+		"rows_to_clear": []
 	},
 	{
 		"sheet_name": "LUBES CAGE SUMMARY",
@@ -30,7 +32,8 @@
 		"first_data_row": 6,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["F", "G"]
+		"columns_to_clear": ["F", "G"],
+		"rows_to_clear": []
 	},
 	{
 		"sheet_name": "SPARE SHOP",
@@ -41,7 +44,8 @@
 		"first_data_row": 6,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["F", "G"]
+		"columns_to_clear": ["F", "G"],
+		"rows_to_clear": []
 	},
 	{
 		"sheet_name": "GAS SUMMARY",
@@ -52,7 +56,8 @@
 		"first_data_row": 8,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": []
+		"columns_to_clear": [],
+		"rows_to_clear": []
 	},
 	{
 		"sheet_name": "FUEL SUMMARY",
@@ -63,7 +68,8 @@
 		"first_data_row": 17,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": []
+		"columns_to_clear": [],
+		"rows_to_clear": []
 	},
 	{
 		"sheet_name": "SUMMARY",
@@ -74,6 +80,7 @@
 		"first_data_row": 0,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": []
+		"columns_to_clear": [],
+		"rows_to_clear": []
 	}
 ]

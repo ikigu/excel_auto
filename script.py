@@ -61,6 +61,7 @@ def process_excel(old_file_name):
         first_data_row: int = sheet["first_data_row"]
         rows_to_ignore: list[int] = sheet["rows_to_ignore"]
         columns_to_clear: list[str] = sheet["columns_to_clear"]
+        rows_to_clear: list[int] = sheet["rows_to_clear"]
 
         # Check that sheet exists
         if sheet_name not in original_workbook.sheetnames:
@@ -115,6 +116,17 @@ def process_excel(old_file_name):
                     if debug_mode:
                         print(
                             f"Copied data from {closing_cell} --> {opening_cell}")
+
+        # Clear rows that affect closing stock except opening stoc
+        for row_to_clear in rows_to_clear:
+            for column in range(ord(first_data_column), ord(final_data_column) + 1):
+                cell_to_clear = f"{chr(column_to_clear)}{row_to_clear}"
+
+                if isinstance(cell_to_clear.value, (int, float)):
+                    cell_to_clear.value = None
+
+                    if debug_mode:
+                        print(f"Cleared data from {cell_to_clear}")
 
         print(f"Data from {sheet_name} has been copied successfully.")
 
