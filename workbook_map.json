@@ -56,7 +56,7 @@
 	},
 	{
 		"sheet_name": "FUEL SUMMARY",
-		"column_map": { "K": "C", "L": "D", "M": "E" },
+		"column_map": { "C": "K", "D": "L", "E": "M" },
 		"row_map": { "9": 11 },
 		"first_data_column": "B",
 		"final_data_column": "H",
