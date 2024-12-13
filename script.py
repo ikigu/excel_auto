@@ -120,7 +120,7 @@ def process_excel(old_file_name):
         # Clear rows that affect closing stock except opening stoc
         for row_to_clear in rows_to_clear:
             for column in range(ord(first_data_column), ord(final_data_column) + 1):
-                cell_to_clear = f"{chr(column_to_clear)}{row_to_clear}"
+                cell_to_clear = new_sheet[f"{chr(column)}{row_to_clear}"]
 
                 if isinstance(cell_to_clear.value, (int, float)):
                     cell_to_clear.value = None
