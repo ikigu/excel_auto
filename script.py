@@ -18,7 +18,7 @@ def process_excel(old_file_name):
         file_name (str): The name of the Excel file to process.
     """
 
-    load_dotenv()
+    load_dotenv(override=True)
     debug_mode = os.getenv("DEBUG") == "True"
 
     # Create today's copy of the Excel workbook to edit
