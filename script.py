@@ -59,6 +59,7 @@ def process_excel(old_file_name):
         first_data_column: str = sheet["first_data_column"]
         final_data_column: str = sheet["final_data_column"]
         first_data_row: int = sheet["first_data_row"]
+        final_data_row: int = sheet["final_data_row"]
         rows_to_ignore: list[int] = sheet["rows_to_ignore"]
         columns_to_clear: list[str] = sheet["columns_to_clear"]
         rows_to_clear: list[int] = sheet["rows_to_clear"]
@@ -72,12 +73,15 @@ def process_excel(old_file_name):
         old_sheet = original_workbook[sheet_name]
         new_sheet = updated_workbook[sheet_name]
 
+        if not final_data_row:
+            final_data_row = new_sheet.max_row + 1
+
         if debug_mode:
             print(f"{sheet_name}\n\n-----------\n\n")
 
         # Copy columns: closing stock --> opening stock
         for closing_stock_column, opening_stock_column in column_map.items():
-            for row_number in range(first_data_row, new_sheet.max_row + 1):
+            for row_number in range(first_data_row, final_data_row):
 
                 if row_number in rows_to_ignore:
                     continue
@@ -94,7 +98,7 @@ def process_excel(old_file_name):
 
         # Clear columns that affect closing stock, except opening column
         for column_to_clear in columns_to_clear:
-            for row_number in range(first_data_row, new_sheet.max_row + 1):
+            for row_number in range(first_data_row, final_data_row):
                 cell_to_clear = new_sheet[f"{column_to_clear}{row_number}"]
 
                 if isinstance(cell_to_clear.value, (int, float)):
