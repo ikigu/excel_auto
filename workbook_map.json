@@ -56,7 +56,7 @@
 		"first_data_row": 8,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": [],
+		"columns_to_clear": ["G", "I"],
 		"rows_to_clear": []
 	},
 	{
