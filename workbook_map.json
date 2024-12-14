@@ -8,7 +8,7 @@
 		"first_data_row": 6,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["F", "G"],
+		"columns_to_clear": ["F", "G", "I", "K"],
 		"rows_to_clear": []
 	},
 	{
@@ -20,7 +20,7 @@
 		"first_data_row": 6,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["F", "G", "H"],
+		"columns_to_clear": ["F", "G", "H", "J", "K", "N"],
 		"rows_to_clear": []
 	},
 	{
@@ -32,7 +32,7 @@
 		"first_data_row": 6,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["F", "G"],
+		"columns_to_clear": ["F", "G", "I", "J", "M"],
 		"rows_to_clear": []
 	},
 	{
@@ -44,7 +44,7 @@
 		"first_data_row": 6,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["F", "G"],
+		"columns_to_clear": ["F", "G", "I", "J", "M"],
 		"rows_to_clear": []
 	},
 	{
@@ -56,7 +56,7 @@
 		"first_data_row": 8,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["G", "I"],
+		"columns_to_clear": ["E", "G", "I"],
 		"rows_to_clear": []
 	},
 	{
@@ -69,7 +69,7 @@
 		"final_data_row": "",
 		"rows_to_ignore": [],
 		"columns_to_clear": [],
-		"rows_to_clear": []
+		"rows_to_clear": [10]
 	},
 	{
 		"sheet_name": "SUMMARY",
@@ -77,10 +77,10 @@
 		"row_map": { "38": 33 },
 		"first_data_column": "C",
 		"final_data_column": "M",
-		"first_data_row": 0,
-		"final_data_row": "",
+		"first_data_row": 7,
+		"final_data_row": 28,
 		"rows_to_ignore": [],
-		"columns_to_clear": [],
-		"rows_to_clear": []
+		"columns_to_clear": ["C", "D", "E", "F", "G", "H", "I", "J", "K"],
+		"rows_to_clear": [34, 35, 36, 37]
 	}
 ]
