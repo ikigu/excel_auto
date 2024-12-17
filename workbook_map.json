@@ -9,7 +9,9 @@
 		"final_data_row": "",
 		"rows_to_ignore": [],
 		"columns_to_clear": ["F", "G", "I", "J", "K", "L"],
-		"rows_to_clear": []
+		"rows_to_clear": [],
+		"delete_column_formulas": false,
+		"hard_delete_cells": []
 	},
 	{
 		"sheet_name": "LUBES SHOP SUMMARY",
@@ -21,7 +23,9 @@
 		"final_data_row": "",
 		"rows_to_ignore": [],
 		"columns_to_clear": ["F", "G", "H", "J", "K", "L", "M", "N", "O"],
-		"rows_to_clear": []
+		"rows_to_clear": [],
+		"delete_column_formulas": false,
+		"hard_delete_cells": []
 	},
 	{
 		"sheet_name": "LUBES CAGE SUMMARY",
@@ -33,7 +37,9 @@
 		"final_data_row": "",
 		"rows_to_ignore": [],
 		"columns_to_clear": ["F", "G", "I", "J", "K", "L", "M", "N"],
-		"rows_to_clear": []
+		"rows_to_clear": [],
+		"delete_column_formulas": false,
+		"hard_delete_cells": []
 	},
 	{
 		"sheet_name": "SPARE SHOP",
@@ -45,7 +51,9 @@
 		"final_data_row": "",
 		"rows_to_ignore": [],
 		"columns_to_clear": ["F", "G", "I", "J", "K", "L", "M", "N"],
-		"rows_to_clear": []
+		"rows_to_clear": [],
+		"delete_column_formulas": false,
+		"hard_delete_cells": []
 	},
 	{
 		"sheet_name": "GAS SUMMARY",
@@ -57,7 +65,9 @@
 		"final_data_row": "",
 		"rows_to_ignore": [],
 		"columns_to_clear": ["E", "F", "G", "H", "K", "L", "I"],
-		"rows_to_clear": []
+		"rows_to_clear": [],
+		"delete_column_formulas": false,
+		"hard_delete_cells": []
 	},
 	{
 		"sheet_name": "FUEL SUMMARY",
@@ -68,8 +78,10 @@
 		"first_data_row": 15,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": [],
-		"rows_to_clear": [7]
+		"columns_to_clear": ["C", "D", "E"],
+		"rows_to_clear": [7],
+		"delete_column_formulas": false,
+		"hard_delete_cells": []
 	},
 	{
 		"sheet_name": "SUMMARY",
@@ -81,6 +93,19 @@
 		"final_data_row": 15,
 		"rows_to_ignore": [],
 		"columns_to_clear": ["C", "D", "E", "F", "G", "H", "I", "J", "K"],
-		"rows_to_clear": [18, 19, 20, 21]
+		"rows_to_clear": [18, 19, 20, 21],
+		"delete_column_formulas": true,
+		"hard_delete_cells": [
+			"B10",
+			"B11",
+			"B12",
+			"B13",
+			"B14",
+			"A10",
+			"A11",
+			"A12",
+			"A13",
+			"A14"
+		]
 	}
 ]
