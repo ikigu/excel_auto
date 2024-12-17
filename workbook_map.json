@@ -1,26 +1,26 @@
 [
 	{
 		"sheet_name": "LUBES STORE",
-		"column_map": { "H": "D" },
+		"column_map": { "H": "E" },
 		"row_map": {},
 		"first_data_column": "",
 		"final_data_column": "",
 		"first_data_row": 6,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["F", "G", "I", "K"],
+		"columns_to_clear": ["F", "G", "I", "J", "K", "L"],
 		"rows_to_clear": []
 	},
 	{
 		"sheet_name": "LUBES SHOP SUMMARY",
-		"column_map": { "I": "D" },
+		"column_map": { "I": "E" },
 		"row_map": {},
 		"first_data_column": "",
 		"final_data_column": "",
 		"first_data_row": 6,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["F", "G", "H", "J", "K", "N"],
+		"columns_to_clear": ["F", "G", "H", "J", "L", "K", "N"],
 		"rows_to_clear": []
 	},
 	{
@@ -74,7 +74,7 @@
 	{
 		"sheet_name": "SUMMARY",
 		"column_map": {},
-		"row_map": { "38": 33 },
+		"row_map": { "22": 17 },
 		"first_data_column": "C",
 		"final_data_column": "M",
 		"first_data_row": 7,
