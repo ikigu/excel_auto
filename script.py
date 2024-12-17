@@ -63,6 +63,8 @@ def process_excel(old_file_name):
         rows_to_ignore: list[int] = sheet["rows_to_ignore"]
         columns_to_clear: list[str] = sheet["columns_to_clear"]
         rows_to_clear: list[int] = sheet["rows_to_clear"]
+        delete_column_formulas: bool = sheet["delete_column_formulas"]
+        hard_delete_cells: list[str]= sheet["hard_delete_cells"]
 
         # Check that sheet exists
         if sheet_name not in original_workbook.sheetnames:
@@ -101,7 +103,9 @@ def process_excel(old_file_name):
             for row_number in range(first_data_row, final_data_row):
                 cell_to_clear = new_sheet[f"{column_to_clear}{row_number}"]
 
-                if isinstance(cell_to_clear.value, (int, float)):
+                if delete_column_formulas:
+                    cell_to_clear.value = None
+                elif isinstance(cell_to_clear.value, (int, float)):
                     cell_to_clear.value = None
 
                     if debug_mode:
@@ -131,6 +135,12 @@ def process_excel(old_file_name):
 
                     if debug_mode:
                         print(f"Cleared data from {cell_to_clear}")
+
+        # Clear hard deletes
+        for cell in hard_delete_cells:
+            cell_to_clear = new_sheet[cell]
+            cell_to_clear.value = None
+
 
         print(f"Data from {sheet_name} has been copied successfully.")
 
