@@ -79,7 +79,7 @@
 		"final_data_row": "",
 		"rows_to_ignore": [],
 		"columns_to_clear": ["C", "D", "E"],
-		"rows_to_clear": [7],
+		"rows_to_clear": [6, 7],
 		"delete_column_formulas": false,
 		"hard_delete_cells": []
 	},
