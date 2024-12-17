@@ -20,7 +20,7 @@
 		"first_data_row": 6,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["F", "G", "H", "J", "L", "K", "N"],
+		"columns_to_clear": ["F", "G", "H", "J", "K", "L", "M", "N", "O"],
 		"rows_to_clear": []
 	},
 	{
@@ -32,7 +32,7 @@
 		"first_data_row": 6,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["F", "G", "I", "J", "M"],
+		"columns_to_clear": ["F", "G", "I", "J", "K", "L", "M", "N"],
 		"rows_to_clear": []
 	},
 	{
@@ -44,7 +44,7 @@
 		"first_data_row": 6,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["F", "G", "I", "J", "M"],
+		"columns_to_clear": ["F", "G", "I", "J", "K", "L", "M", "N"],
 		"rows_to_clear": []
 	},
 	{
@@ -56,20 +56,20 @@
 		"first_data_row": 8,
 		"final_data_row": "",
 		"rows_to_ignore": [],
-		"columns_to_clear": ["E", "G", "I"],
+		"columns_to_clear": ["E", "F", "G", "H", "K", "L", "I"],
 		"rows_to_clear": []
 	},
 	{
 		"sheet_name": "FUEL SUMMARY",
 		"column_map": { "C": "K", "D": "L", "E": "M" },
-		"row_map": { "9": 11 },
+		"row_map": { "6": 8 },
 		"first_data_column": "B",
-		"final_data_column": "H",
-		"first_data_row": 17,
+		"final_data_column": "G",
+		"first_data_row": 15,
 		"final_data_row": "",
 		"rows_to_ignore": [],
 		"columns_to_clear": [],
-		"rows_to_clear": [10]
+		"rows_to_clear": [7]
 	},
 	{
 		"sheet_name": "SUMMARY",
@@ -77,10 +77,10 @@
 		"row_map": { "22": 17 },
 		"first_data_column": "C",
 		"final_data_column": "M",
-		"first_data_row": 7,
-		"final_data_row": 28,
+		"first_data_row": 4,
+		"final_data_row": 15,
 		"rows_to_ignore": [],
 		"columns_to_clear": ["C", "D", "E", "F", "G", "H", "I", "J", "K"],
-		"rows_to_clear": [34, 35, 36, 37]
+		"rows_to_clear": [18, 19, 20, 21]
 	}
 ]
