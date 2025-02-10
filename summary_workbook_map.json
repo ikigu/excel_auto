@@ -1,0 +1,31 @@
+{
+	"sheets": {
+		"names": [
+			"CASH",
+			"M-PESA",
+			"EQUITEL",
+			"OLA CARD or OLA GO",
+			"DELIVERY NOTE or LITTLE PAY",
+			"EQUITY CARD",
+			"KCB",
+			"INVOICE",
+			"RETURNS"
+		]
+	},
+	"table": {
+		"title_cell": "F2",
+		"column_titles": {
+			"B4": "DATE",
+			"C4": "OPENING BALANCE",
+			"D4": "CASH COLLECTION",
+			"E4": "SALARY ADVANCE",
+			"F4": "PETTY CASH COLLECTION",
+			"G4": "DIRECTOR WITHDRAWAL",
+			"H4": "BALANCE AMOUNT",
+			"I4": "BANKED AMOUNT",
+			"J4": "BALANCE"
+		},
+		"date_column": "B",
+		"first_date_row": 5
+	}
+}
