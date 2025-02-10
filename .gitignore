@@ -5,3 +5,8 @@ debug.txt
 __pycache__
 .DS_Store
 test.py
+venv/
+build/
+dist/
+exauto.spec
+tk.py
