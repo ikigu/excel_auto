@@ -76,6 +76,11 @@ def create_summary_file(shift_change_file_path, summary_workbook_map):
     for sheet_name in sheet_names:
         summary_workbook.create_sheet(sheet_name)
 
+        # Change column width
+        for column in range(ord("C"), ord("J") + 1):
+            summary_workbook[sheet_name].column_dimensions[chr(
+                column)].width = 22
+
     summary_workbook.remove(summary_workbook["Sheet"])
 
     # Create tables in sheets
