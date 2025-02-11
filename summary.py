@@ -28,6 +28,14 @@ def get_month_from_file_name(file_name: str) -> str:
     return month
 
 
+def get_day_from_file_name(file_name: str) -> int:
+    file_name = os.path.basename(file_name)
+    day_with_suffix = file_name.split(" ")[0]
+    day_without_suffix = day_with_suffix[:-2]
+
+    return int(day_without_suffix)
+
+
 def create_summary_file_path(shift_change_file_path):
     """
     Gets the path for the summary file, given a shift change file path
@@ -96,10 +104,23 @@ def create_summary_file(shift_change_file_path, summary_workbook_map):
     summary_workbook.close()
 
 # TODO: Add formulas to calculate totals at bottom
-# TODO: Lengthen the columns
-# TODO: Populate the data
 
 
-# Open the previous day's excel file, passed in as an argument to the program
-# Open the month's summary file
-# Copy the values you need
+def transfer_data(shift_change_file: object, summary_file: object, summary_map: dict,  day_number: int,):
+    source_sheet = shift_change_file[summary_map["data_transfer"]
+                                     ["source_sheet"]]
+    first_date_row = summary_map["table"]["first_date_row"]
+    day = str(day_number + (first_date_row - 1))
+
+    for summary_sheet_name, source_column in summary_map["data_transfer"]["source_columns"].items():
+        destination_sheet = summary_file[summary_sheet_name]
+
+        for source_row, destination_column in summary_map["data_transfer"]["map"].items():
+            source_cell = source_sheet[f"{source_column}{source_row}"]
+            destination_cell = destination_sheet[
+                f"{destination_column}{day}"]
+
+            if source_cell.value:
+                destination_cell.value = source_cell.value
+            else:
+                destination_cell.value = 0
