@@ -8,8 +8,7 @@
 			"DELIVERY NOTE or LITTLE PAY",
 			"EQUITY CARD",
 			"KCB",
-			"INVOICE",
-			"RETURNS"
+			"INVOICE"
 		]
 	},
 	"table": {
@@ -27,5 +26,26 @@
 		},
 		"date_column": "B",
 		"first_date_row": 5
+	},
+	"data_transfer": {
+		"source_sheet": "Sheet1",
+		"source_columns": {
+			"CASH": "C",
+			"M-PESA": "D",
+			"EQUITEL": "E",
+			"OLA CARD or OLA GO": "F",
+			"DELIVERY NOTE or LITTLE PAY": "G",
+			"EQUITY CARD": "H",
+			"KCB": "I",
+			"INVOICE": "J"
+		},
+		"map": {
+			"17": "C",
+			"15": "D",
+			"19": "E",
+			"20": "F",
+			"21": "G",
+			"18": "I"
+		}
 	}
 }
