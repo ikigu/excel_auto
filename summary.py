@@ -97,6 +97,11 @@ def create_summary_file(shift_change_file_path, summary_workbook_map):
             cell = f"{date_column}{(first_date_row - 1) + day}"
             sheet[cell] = day
 
+        # Add total formulas
+        for column in range(ord("C"), ord("J") + 1):
+            formula_cell = f"{chr(column)}{first_date_row + number_of_days}"
+            sheet[formula_cell].value = f"=SUM({chr(column)}{first_date_row}:{chr(column)}{(number_of_days + first_date_row) - 1})"
+
     # Create COLLECTION SUMMARY directory
     try:
         os.makedirs(os.path.dirname(summary_file_path,), exist_ok=False)
