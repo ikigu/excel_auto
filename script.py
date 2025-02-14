@@ -64,7 +64,7 @@ def process_excel(old_file_name):
         columns_to_clear: list[str] = sheet["columns_to_clear"]
         rows_to_clear: list[int] = sheet["rows_to_clear"]
         delete_column_formulas: bool = sheet["delete_column_formulas"]
-        hard_delete_cells: list[str]= sheet["hard_delete_cells"]
+        hard_delete_cells: list[str] = sheet["hard_delete_cells"]
 
         # Check that sheet exists
         if sheet_name not in original_workbook.sheetnames:
@@ -140,7 +140,6 @@ def process_excel(old_file_name):
         for cell in hard_delete_cells:
             cell_to_clear = new_sheet[cell]
             cell_to_clear.value = None
-
 
         print(f"Data from {sheet_name} has been copied successfully.")
 
