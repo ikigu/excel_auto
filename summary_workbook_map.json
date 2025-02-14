@@ -28,7 +28,7 @@
 		"first_date_row": 5
 	},
 	"data_transfer": {
-		"source_sheet": "Sheet1",
+		"source_sheet": "SUMMARY",
 		"source_columns": {
 			"CASH": "C",
 			"M-PESA": "D",
