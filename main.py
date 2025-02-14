@@ -8,7 +8,7 @@ from summary import create_summary_file, transfer_data
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python script_name.py <excel_file_name>")
+        print("Usage: exauto <excel_file_name>")
         exit(1)
     elif not os.path.exists(sys.argv[1]):
         print(f"{sys.argv[1]} does not exist!")
