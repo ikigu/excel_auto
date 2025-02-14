@@ -64,3 +64,34 @@ def create_summary_file_path(shift_change_file_path):
         parent_directory, "COLLECTION SUMMARY", f"{month} {year}.xlsx")
 
     return summary_file_path
+
+
+def create_new_file_path(original_filename):
+    month_directory = os.path.dirname(original_filename)
+    year_directory = Path(month_directory).parent.absolute()
+    shift_change_directory = year_directory.parent.absolute()
+
+    file_year = get_year_from_file_name(original_filename)
+    file_month = get_month_from_file_name(original_filename).capitalize()
+    file_day = get_day_from_file_name(original_filename)
+
+    current_file_date = datetime(file_year, list(
+        calendar.month_name).index(file_month), file_day)
+
+    new_file_date = current_file_date + timedelta(days=1)
+
+    new_file_year = new_file_date.year
+    new_file_month = new_file_date.strftime("%B").upper()
+    new_file_day = new_file_date.day
+    day_with_suffix = get_day_with_suffix(new_file_day)
+
+    new_file_name = f"{day_with_suffix} {new_file_month} {new_file_year}.xlsx"
+
+    new_path = os.path.join(shift_change_directory,
+                            f"YEAR {new_file_year}", f"{new_file_month} {new_file_year}")
+
+    os.makedirs(new_path, exist_ok=True)
+
+    new_file_path = os.path.join(new_path, new_file_name)
+
+    return new_file_path
