@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
         access = check_access()
 
-        if not access:
+        if access is False:
             print("Could not create summary file.")
             sys.exit(1)
 
