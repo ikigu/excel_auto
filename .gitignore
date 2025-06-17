@@ -8,5 +8,4 @@ test.py
 venv/
 build/
 dist/
-exauto.spec
 tk.py
