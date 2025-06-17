@@ -49,7 +49,7 @@ def create_summary_file(shift_change_file_path, summary_workbook_map):
             table_column_titles = summary_workbook_map["table"]["column_titles"]["default"]
 
         for cell, title in table_column_titles.items():
-            if "COLLECTION" in title:
+            if "COLLECTION" in title and sheet_name != "CASH":
                 if len(sheet_name.split(" ")) > 1:
                     sheet_name_list = sheet_name.split(" ")
                     first_word = sheet_name_list[0]
@@ -57,6 +57,7 @@ def create_summary_file(shift_change_file_path, summary_workbook_map):
                     title = (" ").join([first_word, second_word, "COLLECTION"])
                 else:
                     title = sheet_name + " " + "COLLECTION"
+
             sheet[cell] = title
 
         # Add dates
