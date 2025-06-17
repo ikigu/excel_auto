@@ -9,9 +9,10 @@ def check_access():
         if resp.status_code == 200 and resp.json().get("access_granted"):
             return True
         else:
-            print("Access denied.")
-            sys.exit(1)
+            print("Error: There was a problem validating the program")
             return False
+    except requests.exceptions.ConnectionError:
+        print("Error: Please connect to the internet.")
     except:
         print("Could not verify access.")
         return False
