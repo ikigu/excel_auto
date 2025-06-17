@@ -14,15 +14,25 @@
 	"table": {
 		"title_cell": "F2",
 		"column_titles": {
-			"B4": "DATE",
-			"C4": "OPENING BALANCE",
-			"D4": "CASH COLLECTION",
-			"E4": "SALARY ADVANCE",
-			"F4": "PETTY CASH COLLECTION",
-			"G4": "DIRECTOR WITHDRAWAL",
-			"H4": "BALANCE AMOUNT",
-			"I4": "BANKED AMOUNT",
-			"J4": "BALANCE"
+			"cash": {
+				"B4": "DATE",
+				"C4": "OPENING BALANCE",
+				"D4": "CASH COLLECTION",
+				"E4": "SALARY ADVANCE",
+				"F4": "PETTY CASH COLLECTION",
+				"G4": "DIRECTOR WITHDRAWAL",
+				"H4": "TOTAL AMOUNT",
+				"I4": "BANKED AMOUNT",
+				"J4": "BALANCE"
+			},
+			"default": {
+				"B4": "DATE",
+				"C4": "OPENING BALANCE",
+				"D4": "CASH COLLECTION",
+				"E4": "TOTAL AMOUNT",
+				"F4": "BANKED AMOUNT",
+				"G4": "BALANCE"
+			}
 		},
 		"date_column": "B",
 		"first_date_row": 5
@@ -40,12 +50,21 @@
 			"INVOICE": "J"
 		},
 		"map": {
-			"17": "C",
-			"15": "D",
-			"19": "E",
-			"20": "F",
-			"21": "G",
-			"18": "I"
+			"cash": {
+				"17": "C",
+				"15": "D",
+				"19": "E",
+				"20": "F",
+				"21": "G",
+				"22": "H",
+				"18": "I"
+			},
+			"default": {
+				"17": "C",
+				"15": "D",
+				"18": "E",
+				"22": "F"
+			}
 		}
 	}
 }
