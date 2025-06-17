@@ -1,4 +1,5 @@
 import requests
+import sys
 
 
 def check_access():
@@ -9,7 +10,12 @@ def check_access():
             return True
         else:
             print("Access denied.")
+            sys.exit(1)
             return False
     except:
         print("Could not verify access.")
         return False
+
+
+if __name__ == "__main__":
+    check_access()
