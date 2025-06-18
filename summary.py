@@ -56,7 +56,10 @@ def create_summary_file(shift_change_file_path, summary_workbook_map):
                     second_word = sheet_name_list[1]
                     title = (" ").join([first_word, second_word, "COLLECTION"])
                 else:
-                    title = sheet_name + " " + "COLLECTION"
+                    if sheet_name == "INVOICE":
+                        title = "INVOICE SALES"
+                    else:
+                        title = sheet_name + " " + "COLLECTION"
 
             sheet[cell] = title
 
@@ -68,13 +71,15 @@ def create_summary_file(shift_change_file_path, summary_workbook_map):
         totals_cell = f"{date_column}{first_date_row + number_of_days}"
         sheet[totals_cell].value = "TOTALS"
 
-        # Add total formulas
+        # ADD FORMULAS
         end_column = "J" if sheet_name == "CASH" else "G"
 
+        # Formulas for totals at bottom
         for column in range(ord("C"), ord(end_column) + 1):
             formula_cell = f"{chr(column)}{first_date_row + number_of_days}"
             sheet[formula_cell].value = f"=SUM({chr(column)}{first_date_row}:{chr(column)}{(number_of_days + first_date_row) - 1})"
 
+        # Formulas for balance
         for row in range(first_date_row, (number_of_days + first_date_row)):
             formula_cell = f"{end_column}{row}"
 
@@ -82,6 +87,19 @@ def create_summary_file(shift_change_file_path, summary_workbook_map):
                 formula = f"=(H{row} - I{row})"
             else:
                 formula = f"=(E{row} - F{row})"
+
+            sheet[formula_cell].value = formula
+
+        # Formulas for total collection
+        total_collection_column = "H" if sheet_name == "CASH" else "E"
+
+        for row in range(first_date_row, (number_of_days + first_date_row)):
+            formula_cell = f"{total_collection_column}{row}"
+
+            if total_collection_column == "E":
+                formula = f"=(C{row} + D{row})"
+            else:
+                formula = f"=((C{row} + D{row}) - (E{row} + F{row} + G{row}))"
 
             sheet[formula_cell].value = formula
 
