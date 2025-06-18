@@ -138,5 +138,7 @@ def transfer_data(shift_change_file: object, summary_file: object, summary_map: 
 
             if source_cell.value:
                 destination_cell.value = source_cell.value
+                print(
+                    f"Copying {source_cell.value} from {source_cell} to {destination_cell}")
             else:
                 destination_cell.value = 0
