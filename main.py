@@ -5,7 +5,7 @@ from filename import create_summary_file_path, get_day_from_file_name
 from openpyxl import load_workbook
 from shift_change import process_excel
 from summary import create_summary_file, transfer_data
-from access import check_access
+# from access import check_access
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -18,11 +18,11 @@ if __name__ == "__main__":
         excel_file_name = sys.argv[1]
         process_excel(excel_file_name)
 
-        access = check_access()
+        # access = check_access()
 
-        if access is False:
-            print("Could not create summary file.")
-            sys.exit(1)
+        # if access is False:
+        #     print("Could not create summary file.")
+        #     sys.exit(1)
 
         summary_file_path = create_summary_file_path(sys.argv[1])
 
