@@ -23,7 +23,8 @@
 				"G4": "DIRECTOR WITHDRAWAL",
 				"H4": "TOTAL AMOUNT",
 				"I4": "BANKED AMOUNT",
-				"J4": "BALANCE"
+				"J4": "BALANCE",
+				"K4": "SHIFT CLOSING BALANCE"
 			},
 			"default": {
 				"B4": "DATE",
@@ -31,7 +32,8 @@
 				"D4": "CASH COLLECTION",
 				"E4": "TOTAL AMOUNT",
 				"F4": "BANKED AMOUNT",
-				"G4": "BALANCE"
+				"G4": "BALANCE",
+				"H4": "SHIFT CLOSING BALANCE"
 			}
 		},
 		"date_column": "B",
@@ -56,14 +58,14 @@
 				"19": "E",
 				"20": "F",
 				"21": "G",
-				"22": "H",
+				"22": "K",
 				"18": "I"
 			},
 			"default": {
 				"17": "C",
 				"15": "D",
-				"18": "E",
-				"22": "F"
+				"18": "F",
+				"22": "H"
 			}
 		}
 	}
