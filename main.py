@@ -44,12 +44,11 @@ if __name__ == "__main__":
         try:
             source_workbook = load_workbook(sys.argv[1], data_only=True)
             summary_workbook = load_workbook(summary_file_path)
+            transfer_data(source_workbook, summary_workbook,
+                          summary_map, day_number)
         except FileNotFoundError as e:
             print(f"Error: {e}")
             sys.exit(1)
-
-        transfer_data(source_workbook, summary_workbook,
-                      summary_map, day_number)
 
         # Close files
         source_workbook.close()
