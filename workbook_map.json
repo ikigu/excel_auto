@@ -86,14 +86,14 @@
 	{
 		"sheet_name": "SUMMARY",
 		"column_map": {},
-		"row_map": { "22": 17 },
+		"row_map": { "23": 17 },
 		"first_data_column": "C",
 		"final_data_column": "M",
 		"first_data_row": 4,
 		"final_data_row": 15,
 		"rows_to_ignore": [],
 		"columns_to_clear": ["C", "D", "E", "F", "G", "H", "I", "J", "K"],
-		"rows_to_clear": [18, 19, 20, 21],
+		"rows_to_clear": [18, 19, 20, 21, 22],
 		"delete_column_formulas": true,
 		"hard_delete_cells": [
 			"B10",

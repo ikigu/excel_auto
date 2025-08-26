@@ -35,7 +35,7 @@ def create_summary_file(shift_change_file_path, summary_workbook_map):
         summary_workbook[sheet_name].protection.password = "nirenm88"
 
         # Change column width
-        for column in range(ord("C"), ord("K") + 1):
+        for column in range(ord("C"), ord("L") + 1):
             summary_workbook[sheet_name].column_dimensions[chr(
                 column)].width = 24
 
@@ -76,7 +76,7 @@ def create_summary_file(shift_change_file_path, summary_workbook_map):
         sheet[totals_cell].value = "TOTALS"
 
         # ADD FORMULAS
-        end_column = "J" if sheet_name == "CASH" else "G"
+        end_column = "K" if sheet_name == "CASH" else "G"
 
         # Formulas for totals at bottom
         for column in range(ord("C"), ord(end_column) + 1):
@@ -87,15 +87,15 @@ def create_summary_file(shift_change_file_path, summary_workbook_map):
         for row in range(first_date_row, (number_of_days + first_date_row)):
             formula_cell = f"{end_column}{row}"
 
-            if end_column == "J":
-                formula = f"=(H{row} - I{row})"
+            if end_column == "K":
+                formula = f"=(I{row} - J{row})"
             else:
                 formula = f"=(E{row} - F{row})"
 
             sheet[formula_cell].value = formula
 
         # Formulas for total collection
-        total_collection_column = "H" if sheet_name == "CASH" else "E"
+        total_collection_column = "I" if sheet_name == "CASH" else "E"
 
         for row in range(first_date_row, (number_of_days + first_date_row)):
             formula_cell = f"{total_collection_column}{row}"
@@ -103,7 +103,7 @@ def create_summary_file(shift_change_file_path, summary_workbook_map):
             if total_collection_column == "E":
                 formula = f"=(C{row} + D{row})"
             else:
-                formula = f"=((C{row} + D{row}) - (E{row} + F{row} + G{row}))"
+                formula = f"=((C{row} + D{row}) - (E{row} + F{row} + G{row} + H{row}))"
 
             sheet[formula_cell].value = formula
 

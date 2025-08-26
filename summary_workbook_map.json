@@ -21,10 +21,11 @@
 				"E4": "SALARY ADVANCE",
 				"F4": "PETTY CASH WITHDRAWAL",
 				"G4": "DIRECTOR WITHDRAWAL",
-				"H4": "TOTAL AMOUNT",
-				"I4": "BANKED AMOUNT",
-				"J4": "BALANCE",
-				"K4": "SHIFT CLOSING BALANCE"
+				"H4": "SUPERVISOR SHORT",
+				"I4": "TOTAL AMOUNT",
+				"J4": "BANKED AMOUNT",
+				"K4": "BALANCE",
+				"L4": "SHIFT CLOSING BALANCE"
 			},
 			"default": {
 				"B4": "DATE",
@@ -58,8 +59,8 @@
 				"19": "E",
 				"20": "F",
 				"21": "G",
-				"22": "K",
-				"18": "I"
+				"22": "H",
+				"18": "J"
 			},
 			"default": {
 				"17": "C",
