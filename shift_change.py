@@ -96,7 +96,7 @@ def process_excel(old_file_name):
 
                     if debug_mode:
                         print(
-                            f"Copied data from {closing_cell} --> {opening_cell}")
+                            f"Copied data from {closing_cell} ({closing_cell.value}) --> {opening_cell} ({opening_cell.value})")
 
         # Clear columns that affect closing stock, except opening column
         for column_to_clear in columns_to_clear:
