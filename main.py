@@ -9,11 +9,11 @@ from summary import create_summary_file, transfer_data
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: exauto <excel_file_name>")
-        exit(1)
+        print("Error: Please input the file name after \"exauto\"")
+        sys.exit(1)
     elif not os.path.exists(sys.argv[1]):
         print(f"{sys.argv[1]} does not exist!")
-        exit(1)
+        sys.exit(1)
     else:
         excel_file_name = sys.argv[1]
         process_excel(excel_file_name)
